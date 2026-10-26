@@ -1,11 +1,39 @@
 
+import { Menu } from 'lucide-react';
 import './App.css'
+import CustomNavbar from './Components/Navbar/CustomNavbar';
+import { useState } from 'react';
 
 function App() {
- 
+  const navItems = [
+  { id: 1, name: "Home", url: "/" },
+  { id: 2, name: "About", url: "/about" },
+  { id: 3, name: "Services", url: "/services" },
+  { id: 4, name: "Portfolio", url: "/portfolio" },
+  { id: 5, name: "Blog", url: "/blog" },
+  { id: 6, name: "Contact", url: "/contact" },
+];
+  const [open, setOpen] = useState(false)
+  const handleOpen = () =>{
+    setOpen(!open)
+  }
 
   return (
     <>
+
+    <nav className='flex justify-between mx-10 '>
+      <span  className='flex cursor-pointer' onClick={handleOpen}>
+        {open? 'true':'false'}
+        <Menu className='md:hidden'></Menu>
+        <p className='ml-4'>My Navbar</p>
+        
+      </span>
+      <ul className='flex'>
+        {
+        navItems.map(items => <CustomNavbar items = {items}></CustomNavbar>)
+      }
+      </ul>
+    </nav>
     <p className='text-9xl text-amber-600'>hello world</p>
 
     <div className="card bg-base-100 w-96 shadow-sm">
