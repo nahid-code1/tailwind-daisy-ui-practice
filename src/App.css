@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+body {
+  font-family: "Waiting for the Sunrise", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
