@@ -2,6 +2,7 @@
 import { Menu } from 'lucide-react';
 import './App.css'
 import CustomNavbar from './Components/Navbar/CustomNavbar';
+import Calender from './Calender';
 import { useState } from 'react';
 
 function App() {
@@ -181,6 +182,8 @@ function App() {
     </div>
   </div>
 </div>
+
+<Calender></Calender>
 
 <h1 className='text-8xl text-center my-80'>Two <span className='bg-gradient-to-r from-pink-500  to-indigo-500 bg-clip-text text-transparent'>Words</span></h1>
 
